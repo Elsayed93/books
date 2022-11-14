@@ -36,42 +36,17 @@ class Inventory
         return null;
     }
 
-    public function search(Guitar $searchGuitar): array
+    public function search(GuitarSpec $searchGuitar): array
     {
-        $builder = $searchGuitar->getBuilder();
-        $model = $searchGuitar->getModel();
-        $type = $searchGuitar->getType();
-        $backWood = $searchGuitar->getBackWood();
-        $topWood = $searchGuitar->getTopWood();
-        // var_dump($builder, $model, $type, $backWood, $topWood);
 
-        $guitarsLength = count($this->guitars);
 
         $matchingGuitars = [];
+        for ($i = 0, $guitarsLength = count($this->guitars); $i < $guitarsLength; $i++) {
 
-        for ($i = 0; $i < $guitarsLength; $i++) {
-
-            if (($builder != null) && ($builder != "") && !(strtolower($builder)  == strtolower($this->guitars[$i]->getBuilder()))) {
-                continue;
+            $isMatch =  $searchGuitar->match($this->guitars[$i]);
+            if ($isMatch) {
+                array_push($matchingGuitars, $this->guitars[$i]);
             }
-
-            if (($model != null) && ($model != "") && !(strtolower($model)  == strtolower($this->guitars[$i]->getModel()))) {
-                continue;
-            }
-
-            if (($type != null) && ($type != "") && !(strtolower($type)  == strtolower($this->guitars[$i]->getType()))) {
-                continue;
-            }
-
-            if (($backWood != null) && ($backWood != "") && !(strtolower($backWood)  == strtolower($this->guitars[$i]->getBackWood()))) {
-                continue;
-            }
-
-            if (($topWood != null) && ($topWood != "") && !(strtolower($topWood)  == strtolower($this->guitars[$i]->getTopWood()))) {
-                continue;
-            }
-
-            array_push($matchingGuitars, $this->guitars[$i]);
         }
 
         return $matchingGuitars;
