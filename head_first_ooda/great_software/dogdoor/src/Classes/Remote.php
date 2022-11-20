@@ -16,6 +16,16 @@ class Remote
     {
         echo 'Pressing the remote control button...';
 
-        $this->dogDoor->isOpen() ?  $this->dogDoor->close() : $this->dogDoor->open();
+        if ($this->dogDoor->isOpen()) {
+            $this->dogDoor->close();
+        } else {
+            $this->dogDoor->open();
+
+            sleep(5);
+            echo '<br>';
+            echo ' after 5 seconds ..... ';
+            
+            $this->dogDoor->close();
+        }
     }
 }

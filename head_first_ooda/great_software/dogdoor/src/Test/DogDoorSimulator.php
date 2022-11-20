@@ -20,19 +20,12 @@ class DogDoorSimulator
         echo ("Fido has gone outside...");
         echo "<br>";
 
-        $door->close();
-
-        echo "<br>";
-        // $remote->pressButton();
-
         echo ("Fido’s all done...");
         // echo "<br>";
         $remote->pressButton();
 
         echo ("Fido’s back inside...");
         echo "<br>";
-        $door->close();
 
-        // $remote->pressButton();
     }
 }
