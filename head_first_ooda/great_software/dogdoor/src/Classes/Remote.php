@@ -2,6 +2,8 @@
 
 namespace App\Classes;
 
+use Spatie\Async\Pool;
+
 class Remote
 {
     private DogDoor $dogDoor;
@@ -19,13 +21,9 @@ class Remote
         if ($this->dogDoor->isOpen()) {
             $this->dogDoor->close();
         } else {
-            $this->dogDoor->open();
 
-            sleep(5);
-            echo '<br>';
-            echo ' after 5 seconds ..... ';
-            
-            $this->dogDoor->close();
+            $this->dogDoor->open();
         }
     }
+
 }

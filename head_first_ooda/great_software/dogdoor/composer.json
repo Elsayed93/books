@@ -11,5 +11,9 @@
             "email": "elsayedelbeshry119@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "react/http": "^1.8",
+        "react/socket": "^1.12",
+        "spatie/async": "^1.5"
+    }
 }
