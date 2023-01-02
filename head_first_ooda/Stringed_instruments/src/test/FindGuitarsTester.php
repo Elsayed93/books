@@ -2,7 +2,7 @@
 
 namespace App\test;
 
-use App\Classes\GuitarSpec;
+use App\Classes\InstrumentSpecs\GuitarSpec;
 use App\Classes\Inventory;
 
 class FindGuitarsTester

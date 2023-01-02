@@ -1,0 +1,5 @@
+Ch5: 
+
+- Abstract classes are placeholders for actual implementation classes.
+
+- The abstract class defines behavior, and the subclasses implement that behavior.

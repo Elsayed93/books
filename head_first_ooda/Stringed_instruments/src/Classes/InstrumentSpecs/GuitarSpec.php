@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Classes\InstrumentSpecs;
 
+use App\Classes\Instruments\Guitar;
 use Exception;
 
 class GuitarSpec extends AbstractInstrumentSpec
@@ -91,7 +92,7 @@ class GuitarSpec extends AbstractInstrumentSpec
     }
 
 
-    public function match($inventoryGuitar)
+    public function match(Guitar $inventoryGuitar)
     {
 
         $searchedBuilder = $this->getBuilder();

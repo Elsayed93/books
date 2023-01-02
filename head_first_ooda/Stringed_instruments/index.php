@@ -15,8 +15,7 @@ $guitar1Specs->setTopWood('wood1');
 $guitar1Specs->setBackWood('wood1');
 
 $guitar1 = new Guitar('serial1', 100, $guitar1Specs);
-var_dump($guitar1);
-die;
+
 
 // guitar 2
 $guitar2Specs = new GuitarSpec('model2', 6);
