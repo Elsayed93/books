@@ -3,3 +3,8 @@ Ch5:
 - Abstract classes are placeholders for actual implementation classes.
 
 - The abstract class defines behavior, and the subclasses implement that behavior.
+
+- Whenever you find common behavior in two
+or more places, look to abstract that behavior
+into a class, and then reuse that behavior in
+the common classes.
