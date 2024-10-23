@@ -12,9 +12,8 @@
 - ```chmod 644 myfile.txt```
 - ```chmod 777 mydir```
 
-> U(user) G(group) O(other)
-    Read Write Execute
-    4    2     1
+<p>U(user) G(group) O(other)</p>
+    <p>Read(4) Write(2) Execute(1) </p>
 
 
 - ```apropos```
@@ -26,9 +25,11 @@ line ending with a backslash (\) symbol. For example, we might show the previous
 command as:
 </p>
 
->$ mysql \\
+```
+$ mysql \\
 --user=saleh \\
 --password=tomcat
+```
 
 <p>
 The backslash characters indicate that this is a single command that should be typed
